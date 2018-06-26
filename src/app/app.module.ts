@@ -9,7 +9,6 @@ import {GameReviewsPage} from "../pages/game-reviews/game-reviews";
 import {GenresPage} from "../pages/genres/genres";
 import {MainPage} from "../pages/main/main";
 
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
