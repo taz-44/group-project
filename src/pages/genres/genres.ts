@@ -22,4 +22,8 @@ export class GenresPage {
     console.log('ionViewDidLoad GenresPage');
   }
 
+  clickFunction(e){
+    console.log(e);
+  }
+
 }

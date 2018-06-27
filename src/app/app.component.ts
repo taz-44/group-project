@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 
 import {AuthPage} from "../pages/auth/auth";
+import { GenresPage } from '../pages/genres/genres';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +13,9 @@ import {AuthPage} from "../pages/auth/auth";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = AuthPage;
+  // rootPage: any = AuthPage;
+  rootPage: any = GenresPage;
+
 
   pages: Array<{title: string, component: any}>;
 

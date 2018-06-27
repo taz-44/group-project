@@ -1,16 +1,39 @@
 <ion-menu [content]="content">
   <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
+    <ion-toolbar color="royal">
+      <!-- <ion-title>HOME</ion-title> -->
+      <ion-icon name="home" class="homeButton"></ion-icon>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+    <!-- <ion-list> -->
+      <ion-list-header class="genresHeader" text-center>Genres</ion-list-header>
+      <button class="menuButton" menuClose ion-item text-center color="primary">
+        Platform
       </button>
-    </ion-list>
+      <button class="menuButton" menuClose ion-item text-center color="secondary">
+        Shooter
+      </button>
+      <button class="menuButton" menuClose ion-item text-center color="danger">
+        Fighting
+      </button>
+      <button class="menuButton" menuClose ion-item text-center color="primary">
+        Stealth
+      </button>
+      <button class="menuButton" menuClose ion-item text-center color="secondary">
+        Survival
+      </button>
+      <button class="menuButton" menuClose ion-item text-center color="danger">
+        Rhythm
+      </button>
+      <button class="menuButton" menuClose ion-item text-center color="primary">
+        Action RPG
+      </button>
+      <button class="menuButton" menuClose ion-item text-center color="secondary">
+        Racing
+      </button>
+    <!-- </ion-list> -->
   </ion-content>
 
 </ion-menu>
