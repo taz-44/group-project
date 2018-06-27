@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs/Observable";
+import * as igdb from "../super-secure-data/igdb-key";
 
 
 @Injectable()
@@ -13,7 +14,7 @@ export class GameApi {
 
   getGames(): Observable<any> {
 
-    return this.http.get(`${this.baseUrl}/games/`, {headers : new HttpHeaders().set("user-key", "cf9692ffe143145fc0eb644c63b3c2ca")});
+    return this.http.get(`${this.baseUrl}/games/`, {headers : new HttpHeaders().set("user-key", igdb.default)});
 
   }
 
