@@ -13,20 +13,24 @@
 
     <ion-item>
       <ion-label floating>Name</ion-label>
-      <ion-input [(ngModel)]="title" type="text"></ion-input>
+      <ion-input [(ngModel)]="name" type="text"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label floating>Review</ion-label>
-      <ion-textarea [(ngModel)]="description"></ion-textarea>
+      <ion-textarea [(ngModel)]="review"></ion-textarea>
     </ion-item>
 
     <ion-item>
-      <ion-range min="0" max="100" pin="true" [(ngModel)]="rating">
+      <ion-range min="0" max="10" pin="true" [(ngModel)]="rating">
         <ion-icon range-left name="sad"></ion-icon>
         <ion-icon range-right name="happy"></ion-icon>
       </ion-range>
     </ion-item>
+
+    <button ion-button icon-only>
+      <ion-icon name="star"></ion-icon>
+    </button>
 
   </ion-list>
 
