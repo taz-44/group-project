@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { GameApi } from '../../Services/game-api';
+//Anticipate an import from game genres to feed in specific game id
 
 /**
  * Generated class for the GameDetailsPage page.
@@ -15,7 +17,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GameDetailsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  //Game title will be getting fed from genres page
+  constructor(public navCtrl: NavController, public navParams: NavParams, gameApi: GameApi) {
+    gameApi.getGames();
   }
 
   ionViewDidLoad() {
