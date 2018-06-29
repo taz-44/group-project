@@ -13,7 +13,9 @@ export class GameApi {
   private baseUrl = 'https://api-endpoint.igdb.com';
 
   getGames(): Observable<any> {
+
     return this.http.get(`${this.baseUrl}/games/`, {headers : new HttpHeaders().set("user-key", igdb.default)});
+
   }
 
 
