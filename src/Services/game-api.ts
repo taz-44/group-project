@@ -18,5 +18,25 @@ export class GameApi {
 
   }
 
+  getGameDetails(gameId): Observable<any> {
+
+    return this.http.get(`${this.baseUrl}/games/${gameId}`, {headers : new HttpHeaders().set("user-key", igdb.default)})
+
+  }
+
+  getGenres(): Observable<any> {
+
+    return this.http.get(`${this.baseUrl}/genres/`, {headers : new HttpHeaders().set("user-key", igdb.default)})
+
+  }
+
+  getGenresDetails(genreId){
+
+    return this.http.get(`${this.baseUrl}/genres/${genreId}`, {headers : new HttpHeaders().set("user-key", igdb.default)})
+
+  }
+
+
+
 
 }
