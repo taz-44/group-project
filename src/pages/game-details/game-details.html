@@ -16,7 +16,7 @@
 <ion-content padding>
   <ion-card>
     <ion-card-header>
-      Game Details | {{gameName}}
+      Game Details - {{gameName}}
     </ion-card-header>
     <ion-card-content>
       <div>
@@ -28,7 +28,7 @@
       <div>
         <!-- Game overview -->
       </div>
-      <button ion-button>
+      <button ion-button (click)="toReviewsPage()">
         Game Reviews
         <!-- link to game reviews page -->
       </button>
