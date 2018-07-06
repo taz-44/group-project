@@ -6,13 +6,6 @@ import { GameApi } from "../../Services/game-api";
 import {HttpClient} from "@angular/common/http";
 
 
-/**
- * Generated class for the MainPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-main',
@@ -22,8 +15,12 @@ export class MainPage {
 
   games:any;
 
-  constructor(public http: HttpClient, public navCtrl: NavController, public navParams: NavParams, public afAuth: AngularFireAuth, public gameApi: GameApi) {
-  }
+  constructor(
+    public http: HttpClient,
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public afAuth: AngularFireAuth,
+    public gameApi: GameApi) {  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainPage');
@@ -31,11 +28,10 @@ export class MainPage {
       this.games = data;
       console.log(this.games);
     })
+    this.gameApi.getPopularGames().subscribe()
   }
 
-  login() {
-    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
-  }
+
   logout() {
     this.afAuth.auth.signOut();
   }
