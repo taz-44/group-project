@@ -36,6 +36,21 @@ export class GameApi {
 
   }
 
+  getPopularGames(): Observable<any>{
+
+    return this.http.get(`${this.baseUrl}/games/?fields=name,popularity&order=popularity:desc&limit=20`)
+
+  }
+
+  getUpcomingGames(): Observable<any>{
+
+    let d = new Date();
+    let n = d.getTime();
+
+    return this.http.get(`${this.baseUrl}/release_dates/?fields=*&order=date:asc&filter[date][gt]=${n}&expand=game&limit=20`);
+
+  }
+
 
 
 
