@@ -14,7 +14,52 @@
 
 
 <ion-content padding>
+  <ion-content padding>
 
+    <ion-title>Popular Games</ion-title>
+    <ion-scroll scrollX="true" direction="x">
+      <ion-card *ngFor="let popularGame of popularGamesArray">
+        <ion-card-content (click)="clickedGame(popularGame.id)">
+          <ion-card-title>
+            <img class="cover" src="{{popularGame.cover.url}}">
+          </ion-card-title>
+          {{popularGame.name}}
+        </ion-card-content>
+      </ion-card>
+    </ion-scroll>
 
+    <ion-title>Recently Released</ion-title>
+    <ion-scroll scrollX="true" direction="x">
+      <ion-card *ngFor="let recentlyReleasedGame of recentlyReleasedGamesArray">
+        <ion-card-content (click)="clickedGame(recentlyReleasedGame.game.id)">
+          <ion-card-title>
+            <img class="cover" src="{{recentlyReleasedGame.game.cover.url}}">
+          </ion-card-title>
+          {{recentlyReleasedGame.game.name}}
+        </ion-card-content>
+      </ion-card>
+    </ion-scroll>
 
+    <ion-title>Upcoming Releases</ion-title>
+    <ion-scroll scrollX="true" direction="x">
+      <ion-card *ngFor="let upcomingGame of upcomingGamesArray">
+        <ion-card-content (click)="clickedGame(upcomingGame.game.id)">
+          <ion-card-title>
+            <img class="cover" src="{{upcomingGame.game.cover.url}}">
+          </ion-card-title>
+          {{upcomingGame.game.name}}
+        </ion-card-content>
+      </ion-card>
+    </ion-scroll>
+
+    <ion-title>All Genres</ion-title>
+    <ion-card>
+      <ion-card-content (click)="goToGenres()">
+        <ion-card-title>
+          Go to Genres
+        </ion-card-title>
+      </ion-card-content>
+    </ion-card>
+
+  </ion-content>
 </ion-content>
