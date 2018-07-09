@@ -2,8 +2,6 @@ import { Injectable } from "@angular/core";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import { Observable } from "rxjs/Observable";
 import * as igdb from "../../secure-stuff/igdbKey";
-import {a} from "@angular/core/src/render3";
-
 
 @Injectable()
 export class GameApi {
@@ -11,8 +9,7 @@ export class GameApi {
   constructor(private http: HttpClient) {
   }
 
-  // private baseUrl = 'https://api-endpoint.igdb.com';
-  private baseUrl = 'https://api-2445582011268.apicast.io/genres/meta';
+  private baseUrl = 'https://api-endpoint.igdb.com';
 
   getGames(): Observable<any> {
 
