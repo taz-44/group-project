@@ -8,7 +8,6 @@ import {GameDetailsPage} from "../pages/game-details/game-details";
 import {GameReviewsPage} from "../pages/game-reviews/game-reviews";
 import {GenresPage} from "../pages/genres/genres";
 import {MainPage} from "../pages/main/main";
-
 import {GameApi} from "../Services/game-api";
 
 import { StatusBar } from '@ionic-native/status-bar';
