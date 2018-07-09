@@ -4,6 +4,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {AuthPage} from "../pages/auth/auth";
+import { GameDetailsPage } from '../pages/game-details/game-details';
+import { MainPage } from '../pages/main/main';
 
 @Component({
   templateUrl: 'app.html'
@@ -11,7 +13,7 @@ import {AuthPage} from "../pages/auth/auth";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = AuthPage;
+  rootPage: any = GameDetailsPage;
 
   pages: Array<{title: string, component: any}>;
 

@@ -21,6 +21,7 @@ secure-stuff/
 coverage/
 dist/
 node_modules/
+secure-stuff/
 tmp/
 temp/
 hooks/
