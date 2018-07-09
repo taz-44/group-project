@@ -59,6 +59,7 @@ export class MainPage {
       for(let i = 0; i < this.upcomingGames.length; i++){
         this.upcomingGamesArray.push(this.upcomingGames[i]);
       }
+      
       console.log("upcoming games");
       console.log(this.upcomingGames);
     });
