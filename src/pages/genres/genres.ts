@@ -33,4 +33,7 @@ export class GenresPage {
     console.log("hi");
   }
 
+  ionViewDidEnter(){
+    this.menu.open();
+  }
 }

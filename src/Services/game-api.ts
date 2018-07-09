@@ -12,7 +12,7 @@ export class GameApi {
   }
 
   // private baseUrl = 'https://api-endpoint.igdb.com';
-  private baseUrl = 'https://api-2445582011268.apicast.io/genres/meta';
+  private baseUrl = 'https://api-endpoint.igdb.com';
 
   getGames(): Observable<any> {
 
