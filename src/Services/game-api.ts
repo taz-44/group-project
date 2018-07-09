@@ -11,7 +11,8 @@ export class GameApi {
   constructor(private http: HttpClient) {
   }
 
-  private baseUrl = 'https://api-endpoint.igdb.com';
+  // private baseUrl = 'https://api-endpoint.igdb.com';
+  private baseUrl = 'https://api-2445582011268.apicast.io/genres/meta';
 
   getGames(): Observable<any> {
 

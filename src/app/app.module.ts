@@ -12,17 +12,15 @@ import { AngularFireDatabaseModule , AngularFireDatabase } from "angularfire2/da
 import { Facebook } from '@ionic-native/facebook';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import {AuthPage} from "../pages/auth/auth";
+import {GameDetailsPage} from "../pages/game-details/game-details";
+import {GameReviewsPage} from "../pages/game-reviews/game-reviews";
+import {GenresPage} from "../pages/genres/genres";
+import {MainPage} from "../pages/main/main";
+import { GameApi } from '../Services/game-api';
 import { MyApp } from './app.component';
-import { AuthPage } from "../pages/auth/auth";
-import { GameDetailsPage } from "../pages/game-details/game-details";
-import { GameReviewsPage } from "../pages/game-reviews/game-reviews";
-import { GenresPage } from "../pages/genres/genres";
-import { MainPage } from "../pages/main/main";
-
-import { GameApi } from "../Services/game-api";
 import { environment } from '../environment/environment';
-
+// import { GenresProvider } from '../providers/genres/genres';
 
 @NgModule({
   declarations: [

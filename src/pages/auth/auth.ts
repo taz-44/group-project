@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {GameApi} from "../../Services/game-api";
 
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
@@ -52,6 +53,7 @@ export class AuthPage {
         .then(res => console.log(res));
     }
   }
+  gameData: any;
 
   signOut() {
     this.afAuth.auth.signOut();
@@ -65,5 +67,3 @@ export class AuthPage {
 
 
 }
-
-
