@@ -22,15 +22,23 @@
     </ion-item>
 
     <ion-item>
-      <ion-range min="0" max="10" pin="true" [(ngModel)]="rating">
-        <ion-icon range-left name="sad"></ion-icon>
-        <ion-icon range-right name="happy"></ion-icon>
-      </ion-range>
+
+      <ion-icon name="{{starRating >= 1 ? 'star' : 'ios-star-outline'}}" (click)=setReview(1)></ion-icon>
+      <ion-icon name="{{starRating >= 2 ? 'star' : 'ios-star-outline'}}" (click)=setReview(2)></ion-icon>
+      <ion-icon name="{{starRating >= 3 ? 'star' : 'ios-star-outline'}}" (click)=setReview(3)></ion-icon>
+      <ion-icon name="{{starRating >= 4 ? 'star' : 'ios-star-outline'}}" (click)=setReview(4)></ion-icon>
+      <ion-icon name="{{starRating >= 5 ? 'star' : 'ios-star-outline'}}" (click)=setReview(5)></ion-icon>
+
+
+
+
     </ion-item>
 
-    <button ion-button icon-only>
-      <ion-icon name="star"></ion-icon>
-    </button>
+    <!--<button ion-button icon-only>-->
+      <!--<ion-icon name="star"></ion-icon>-->
+    <!--</button>-->
+
+
 
   </ion-list>
 

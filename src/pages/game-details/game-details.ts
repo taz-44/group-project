@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {GameApi} from "../../Services/game-api";
 
 /**
  * Generated class for the GameDetailsPage page.
@@ -16,6 +17,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class GameDetailsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+
   }
 
   ionViewDidLoad() {
