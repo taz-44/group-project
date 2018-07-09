@@ -26,15 +26,10 @@ export class GameApi {
 
   getGenres(): Observable<any> {
 
-    return this.http.get(`${this.baseUrl}/genres/`, {headers : new HttpHeaders().set("user-key", igdb.default)})
+    return this.http.get(`${this.baseUrl}/genres/?fields=*&limit=30`, {headers : new HttpHeaders().set("user-key", igdb.default)})
 
   }
 
-  getGenresDetails(genreId): Observable<any> {
-
-    return this.http.get(`${this.baseUrl}/genres/${genreId}`, {headers : new HttpHeaders().set("user-key", igdb.default)})
-
-  }
 
   getPopularGames(): Observable<any>{
 
