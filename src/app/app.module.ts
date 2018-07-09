@@ -12,6 +12,9 @@ import {GameDetailsPage} from "../pages/game-details/game-details";
 import {GameReviewsPage} from "../pages/game-reviews/game-reviews";
 import {GenresPage} from "../pages/genres/genres";
 import {MainPage} from "../pages/main/main";
+import { HttpClientModule } from '@angular/common/http';
+import { GameApi } from '../Services/game-api';
+// import { GenresProvider } from '../providers/genres/genres';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,7 @@ import {MainPage} from "../pages/main/main";
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -38,7 +42,8 @@ import {MainPage} from "../pages/main/main";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GameApi
   ]
 })
 export class AppModule {}
