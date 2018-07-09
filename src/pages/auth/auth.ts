@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {GameApi} from "../../Services/game-api";
 
 /**
  * Generated class for the AuthPage page.
@@ -15,11 +16,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AuthPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public gameApi: GameApi) {
   }
+  gameData: any;
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AuthPage');
+    this.gameApi.getGames().subscribe(data => {
+      this.gameData = data;
+      console.log(this.gameData);
+    });
+
   }
 
 }

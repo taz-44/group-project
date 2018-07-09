@@ -9,9 +9,12 @@ import {GameReviewsPage} from "../pages/game-reviews/game-reviews";
 import {GenresPage} from "../pages/genres/genres";
 import {MainPage} from "../pages/main/main";
 
+import {GameApi} from "../Services/game-api";
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -26,6 +29,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -39,6 +43,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    GameApi,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
