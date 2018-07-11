@@ -1,11 +1,11 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Genres</ion-title>
+    <ion-title class="genresTitle"><h1>{{currentGenre}}</h1></ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content>
 
-  <ion-icon name="ios-menu" menuToggle></ion-icon>
+  <ion-icon name="ios-menu" (click)="openMenu()"></ion-icon>
 
 
 </ion-content>

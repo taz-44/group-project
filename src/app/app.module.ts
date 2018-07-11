@@ -20,6 +20,7 @@ import {MainPage} from "../pages/main/main";
 import { GameApi } from '../Services/game-api';
 import { MyApp } from './app.component';
 import { environment } from '../environment/environment';
+import { GenresProvider } from '../providers/genres/genres';
 // import { GenresProvider } from '../providers/genres/genres';
 
 @NgModule({
@@ -56,6 +57,7 @@ import { environment } from '../environment/environment';
     GameApi,
     AngularFireDatabase,
     Facebook,
+    GenresProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

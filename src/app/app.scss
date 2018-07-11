@@ -15,20 +15,60 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+ion-backdrop{
+  background-color: #00D800;
+}
+ion-list{
+  // background-color: black;
+  height: 100%;
+  text-align: center;
+}
+ion-content{
+  overflow: hidden;
+}
 .menuButton{
   width: 95%;
+  height: 40px;
   margin: auto;
-  margin-bottom: 1px;
+  margin-bottom: 4px;
   border-radius: 2px;
+  background-color: grey;
+  border: 1px solid black;
+  color: #00D800;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 1px 1px 30px gold;
+}
+
+.menuButton:hover{
+  border: 5px solid grey;
 }
 
 .genresHeader{
-  font-size: 20px;
-  color: black;
+  font-size: 25px;
+  color: #00D800;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-shadow: 1px 1px 50px gold;
+  background-color: black;
+  border-bottom: 1px solid grey;
 }
 
 .homeButton{
   font-size: 35px;
   margin-left: 5px;
   color: black;
+}
+
+div::-webkit-scrollbar {
+    border:none;
+    width:0;
+    background: rgba(0,0,0,0);
+  }
+
+.genresMenu{
+  .scroll-content{
+    overflow: hidden;
+    background-color: black;
+  }
 }

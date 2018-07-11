@@ -1,4 +1,4 @@
-<ion-menu [content]="content">
+<ion-menu [content]="content" class="genresMenu">
   <ion-header>
     <ion-toolbar color="royal">
       <ion-title>HOME</ion-title>
@@ -9,30 +9,7 @@
   <ion-content>
     <ion-list>
        <ion-list-header class="genresHeader" text-center>Genres</ion-list-header>
-      <button class="menuButton" menuClose ion-item text-center color="primary">
-        Platform
-      </button>
-      <button class="menuButton" menuClose ion-item text-center color="secondary">
-        Shooter
-      </button>
-      <button class="menuButton" menuClose ion-item text-center color="danger">
-        Fighting
-      </button>
-      <button class="menuButton" menuClose ion-item text-center color="primary">
-        Stealth
-      </button>
-      <button class="menuButton" menuClose ion-item text-center color="secondary">
-        Survival
-      </button>
-      <button class="menuButton" menuClose ion-item text-center color="danger">
-        Rhythm
-      </button>
-      <button class="menuButton" menuClose ion-item text-center color="primary">
-        Action RPG
-      </button>
-      <button class="menuButton" menuClose ion-item text-center color="secondary">
-        Racing
-      </button>
+      <button class="menuButton" #genreSelect *ngFor="let genre of genresArray" (click)="genrePopulate(genreSelect)" value='{{genre.name}}' menuClose>{{genre.name}}</button>
     </ion-list>
   </ion-content>
 

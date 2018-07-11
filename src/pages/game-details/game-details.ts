@@ -22,9 +22,9 @@ export class GameDetailsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private gameApi: GameApi) {
   }
 
-  pullDetails() {
-    let details: any = this.gameApi.getGames().subscribe(games)
-  }
+  // pullDetails() {
+  //   let details: any = this.gameApi.getGames().subscribe(games)
+  // }
 
 
   ionViewDidLoad() {
