@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, MenuController, Events } from 'ion
 import { Observable } from 'rxjs/Observable';
 import { GameApi } from '../../Services/game-api';
 import { GenresProvider } from '../../providers/genres/genres';
+import { GenrePopulatedPage } from '../genre-populated/genre-populated';
 
 
 @IonicPage()
@@ -48,16 +49,20 @@ export class GenresPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GenresPage');
-    // console.log(this.genres);
+    console.log(this.genres);
     // this.selectedGenre = this.genresProvider.currentGenre;
   }
 
   ionViewDidEnter(){
-    this.menuCtrl.open();
+    // this.menuCtrl.open();
     console.log('hi');
   }
 
-  openMenu(){
-    this.menuCtrl.open();
+  // openMenu(){
+  //   this.menuCtrl.open();
+  // }
+
+  goToGenresPopulate(){
+    this.navCtrl.push(GenrePopulatedPage)
   }
 }

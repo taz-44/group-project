@@ -1,4 +1,4 @@
-<ion-menu [content]="content" class="genresMenu">
+<!-- <ion-menu [content]="content" class="genresMenu">
   <ion-header>
     <ion-toolbar color="royal">
       <ion-title>HOME</ion-title>
@@ -13,7 +13,7 @@
     </ion-list>
   </ion-content>
 
-</ion-menu>
+</ion-menu> -->
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
-<ion-nav #menuContentOpen [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<ion-nav [root]="rootPage" swipeBackEnabled="false"></ion-nav>

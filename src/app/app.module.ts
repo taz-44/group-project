@@ -21,6 +21,7 @@ import { GameApi } from '../Services/game-api';
 import { MyApp } from './app.component';
 import { environment } from '../environment/environment';
 import { GenresProvider } from '../providers/genres/genres';
+import { GenrePopulatedPage } from '../pages/genre-populated/genre-populated';
 // import { GenresProvider } from '../providers/genres/genres';
 
 @NgModule({
@@ -30,7 +31,8 @@ import { GenresProvider } from '../providers/genres/genres';
     GameDetailsPage,
     GameReviewsPage,
     GenresPage,
-    MainPage
+    MainPage,
+    GenrePopulatedPage
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,8 @@ import { GenresProvider } from '../providers/genres/genres';
     GameDetailsPage,
     GameReviewsPage,
     GenresPage,
-    MainPage
+    MainPage,
+    GenrePopulatedPage
   ],
   providers: [
     StatusBar,

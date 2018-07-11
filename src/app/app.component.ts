@@ -28,6 +28,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
 
+    {title: "Genres Page", component: GenresPage}
+
     ];
     this.gameApi.getGenres().subscribe(data =>{
       this.genres = data;
