@@ -17,15 +17,15 @@ import { GameReviewsPage } from '../game-reviews/game-reviews';
   templateUrl: 'game-details.html',
 })
 export class GameDetailsPage {
+  gameDetails: string;
 
   //Game id will be getting fed from genres page
   constructor(public navCtrl: NavController, public navParams: NavParams, private gameApi: GameApi) {
+    this.gameApi.getGameDetails(54432).subscribe( data =>{
+      this.gameDetails = data;
+      console.log(this.gameDetails);
+    })
   }
-
-  pullDetails() {
-    let details: any = this.gameApi.getGames().subscribe(games)
-  }
-
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GameDetailsPage');

@@ -16,17 +16,14 @@
 <ion-content padding>
   <ion-card>
     <ion-card-header>
-      Game Details - {{gameName}}
+      {{gameName}}
     </ion-card-header>
     <ion-card-content>
       <div>
-        <!-- Game title and release date -->
+        {{gameDetails.name}}
       </div>
       <div>
-        <!-- Available on these gaming platforms -->
-      </div>
-      <div>
-        <!-- Game overview -->
+        {{gameDetials.summary}}
       </div>
       <button ion-button (click)="toReviewsPage()">
         Game Reviews
