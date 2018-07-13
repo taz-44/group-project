@@ -46,9 +46,12 @@ export class MainPage {
       this.recentlyReleasedGames = data;
       for(let i = 0; i < this.recentlyReleasedGames.length; i++) {
         if (this.recentlyReleasedGames[i].game.cover !== undefined) {
+
           this.recentlyReleasedGamesArray.push(this.recentlyReleasedGames[i]);
         }
       }
+      this.recentlyReleasedGamesArray = this.removeDuplicates(this.recentlyReleasedGamesArray,'game', 'name');
+
       console.log("recent games");
       console.log(this.recentlyReleasedGames);
     });
@@ -59,7 +62,8 @@ export class MainPage {
       for(let i = 0; i < this.upcomingGames.length; i++){
         this.upcomingGamesArray.push(this.upcomingGames[i]);
       }
-      
+      this.upcomingGamesArray = this.removeDuplicates(this.upcomingGamesArray, 'game', 'name');
+
       console.log("upcoming games");
       console.log(this.upcomingGames);
     });
@@ -68,6 +72,12 @@ export class MainPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainPage');
+  }
+
+  removeDuplicates(myArr, prop, cProp) {
+    return myArr.filter((obj, pos, arr) => {
+      return arr.map(mapObj => mapObj[prop][cProp]).indexOf(obj[prop][cProp]) === pos;
+    });
   }
 
   clickedGame(gameId){

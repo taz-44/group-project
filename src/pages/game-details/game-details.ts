@@ -23,7 +23,7 @@ export class GameDetailsPage {
   }
 
   pullDetails() {
-    let details: any = this.gameApi.getGames().subscribe(games)
+    let details: any = this.gameApi.getGames().subscribe()
   }
 
 

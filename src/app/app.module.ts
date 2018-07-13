@@ -20,7 +20,6 @@ import {MainPage} from "../pages/main/main";
 import { GameApi } from '../Services/game-api';
 import { MyApp } from './app.component';
 import { environment } from '../environment/environment';
-// import { GenresProvider } from '../providers/genres/genres';
 
 @NgModule({
   declarations: [
