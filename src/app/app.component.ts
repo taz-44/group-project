@@ -8,6 +8,7 @@ import { MainPage } from '../pages/main/main';
 import { GenresProvider } from '../providers/genres/genres';
 import { GameApi } from '../Services/game-api';
 import { GenresPage } from '../pages/genres/genres';
+import { GenrePopulatedPage } from '../pages/genre-populated/genre-populated';
 
 @Component({
   templateUrl: 'app.html'
@@ -31,16 +32,16 @@ export class MyApp {
     {title: "Genres Page", component: GenresPage}
 
     ];
-    this.gameApi.getGenres().subscribe(data =>{
-      this.genres = data;
-      console.log(this.genres);
-      for(let i = 0; i < this.genres.length; i++){
-        this.gameApi.getGenresDetails(this.genres[i].id).subscribe(data =>{
-          this.genresArray.push(data[0])
-        })
-      }
-      console.log(this.genresArray);
-    })
+    // this.gameApi.getGenres().subscribe(data =>{
+    //   this.genres = data;
+    //   console.log(this.genres);
+    //   for(let i = 0; i < this.genres.length; i++){
+    //     this.gameApi.getGenresDetails(this.genres[i].id).subscribe(data =>{
+    //       this.genresArray.push(data[0])
+    //     })
+    //   }
+    //   // console.log(this.genresArray);
+    // })
   }
 
   initializeApp() {

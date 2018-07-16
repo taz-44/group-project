@@ -7,16 +7,17 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Main Page</ion-title>
+    <ion-title class="mainHeader"><h2>Main Page</h2></ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  <ion-content padding>
+<ion-content padding class="mainContainer">
+  <ion-content padding class="innerContainer">
 
     <ion-title>Popular Games</ion-title>
+    <hr style="width: 50%; border: .3px solid black; background-color: black;">
     <ion-scroll scrollX="true" direction="x">
       <ion-card *ngFor="let popularGame of popularGamesArray">
         <ion-card-content (click)="clickedGame(popularGame.id)">
@@ -29,6 +30,7 @@
     </ion-scroll>
 
     <ion-title>Recently Released</ion-title>
+    <hr style="width: 50%; border: .3px solid black; background-color: black;">
     <ion-scroll scrollX="true" direction="x">
       <ion-card *ngFor="let recentlyReleasedGame of recentlyReleasedGamesArray">
         <ion-card-content (click)="clickedGame(recentlyReleasedGame.game.id)">
@@ -41,6 +43,7 @@
     </ion-scroll>
 
     <ion-title>Upcoming Releases</ion-title>
+    <hr style="width: 50%; border: .3px solid black; background-color: black;">
     <ion-scroll scrollX="true" direction="x">
       <ion-card *ngFor="let upcomingGame of upcomingGamesArray">
         <ion-card-content (click)="clickedGame(upcomingGame.game.id)">
@@ -52,14 +55,14 @@
       </ion-card>
     </ion-scroll>
 
-    <ion-title>All Genres</ion-title>
-    <ion-card>
+    <!-- <ion-title>All Genres</ion-title> -->
+    <!-- <ion-card class='buttonClass'> -->
       <ion-card-content (click)="goToGenres()">
-        <ion-card-title>
+        <ion-card-title class="buttonCard">
           Go to Genres
         </ion-card-title>
       </ion-card-content>
-    </ion-card>
+    <!-- </ion-card> -->
 
   </ion-content>
 </ion-content>

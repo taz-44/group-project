@@ -7,6 +7,7 @@ export class GenresProvider {
 
   genres = [];
   currentGenre;
+  gameIdsofGenre = [];
 
   constructor(public http: HttpClient) {}
 

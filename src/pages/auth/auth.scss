@@ -1,3 +1,53 @@
 page-auth {
 
+
+ion-navbar{
+  // border: 1px solid black;
+  height: 50px;
+  box-shadow: 0px 0px 20px 1px black;
+}
+
+  ion-title{
+    text-align: center;
+    background-color: white;
+    // border-bottom: 1px solid black;
+    // width: 50%;
+
+
+    h2{
+      // color: rgba(255,255,255, .5);
+      color: black;
+      padding-bottom: 5px;
+    }
+  }
+
+  ion-content{
+    text-align: center;
+    // padding-top: 50px;
+
+    .hello{
+      height: 100%;
+      width: 100%;
+      background-image: url('../../assets/imgs/backgroundLarge.jpeg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      // border: 1px solid black;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div{
+        background-color: rgba(255,255,255, .9);
+        border-radius: 5px;
+        padding: 10px;
+      }
+    }
+
+
+  }
+
+  .buttonCard{
+    background-color: red;
+  }
 }

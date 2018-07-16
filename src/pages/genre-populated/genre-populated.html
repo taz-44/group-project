@@ -7,12 +7,18 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>genrePopulated</ion-title>
+    <ion-title><h2>{{currentGenre}}</h2></ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="backgroundContainer">
+  <div class="mainContainer">
+    <div class="gameContainer" *ngFor="let game of gamesToDisplay">
+      <!-- <img class="cover" src="game.cover.url"> -->
+      <p>{{game.name}}</p>
+    </div>
+  </div>
 
 </ion-content>

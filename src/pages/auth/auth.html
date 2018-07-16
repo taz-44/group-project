@@ -7,13 +7,12 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Sign In</ion-title>
+    <ion-title><h2>Sign In</h2></ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
-<ion-content padding>
+<ion-content>
 
   <!--//shows after login-->
   <div *ngIf="afAuth.user | async as user; else showLogin">
@@ -22,10 +21,14 @@
     <button ion-button outline (click)="signOut()">Logout</button>
   </div>
   <!--//shows before login-->
-  <ng-template #showLogin>
-    <p>To view The App please sign-in</p>
-    <button ion-button outline (click)="signInWithFacebook()"><ion-icon padding-right name="logo-facebook"></ion-icon>Login</button>
-    <button ion-button outline (click)="login()"><ion-icon padding-right name="logo-google"></ion-icon> Login</button>
+  <ng-template #showLogin class="showLogin">
+    <div class="hello">
+      <div>
+        <p>To view The App please sign-in</p>
+        <button ion-button outline (click)="signInWithFacebook()"><ion-icon padding-right name="logo-facebook"></ion-icon>Login</button>
+        <button ion-button outline (click)="login()"><ion-icon padding-right name="logo-google"></ion-icon> Login</button>
+      </div>
+    </div>
   </ng-template>
 
 
