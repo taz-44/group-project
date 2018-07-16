@@ -1,32 +1,12 @@
-<!--
-  Generated template for the GameDetailsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Game Details</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
+<ion-content *ngFor="let game of gameDetails" padding>
+  
   <ion-card>
-    <ion-card-header>
-      Game Details - {{gameName}}
-    </ion-card-header>
     <ion-card-content>
-      <div>
-        <!-- Game title and release date -->
-      </div>
-      <div>
-        <!-- Available on these gaming platforms -->
-      </div>
-      <div>
-        <!-- Game overview -->
+      <ion-title id="name">
+        {{game.name}}
+      </ion-title>
+      <div id="summary">
+        {{game.summary}}
       </div>
       <button ion-button (click)="toReviewsPage()">
         Game Reviews
