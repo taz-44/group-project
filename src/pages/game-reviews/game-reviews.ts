@@ -16,11 +16,12 @@ import { map} from "rxjs/operators"
  */
 
 //bi nemsen
-  export interface Reviews {
-    review: string;
-    title: string;
-    stars: number;
-    date: Date;
+export interface Reviews {
+  review: string;
+  title: string;
+  stars: number;
+  date: Date;
+  // gameId: number;
 
 }
 
@@ -32,26 +33,20 @@ import { map} from "rxjs/operators"
 
 
 export class GameReviewsPage {
-
-    date = new Date();
-    review: Reviews = {
-      title: "",
-      review: "",
-      stars: 0,
-      date: new Date()
-    };
+  review: Reviews = {
+    title: "",
+    review: "",
+    stars: 0,
+    date: new Date()
+    //gameId = this.Id;
+  };
 
   private reviewsCollection: AngularFirestoreCollection<Reviews>;
   reviews: Observable<Reviews[]>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public afs: AngularFirestore) {
     this.reviewsCollection = afs.collection<Reviews>('reviews');
-    this.reviewsCollection.valueChanges().subscribe(reviews => {
-      this.reviews = reviews;
-
-      //...how to sort array of objects...
-
-    });
+    this.reviews = this.reviewsCollection.valueChanges();
 
 
   }
@@ -68,4 +63,9 @@ export class GameReviewsPage {
     this.review.stars = rating;
   }
 
+  // saveProduct(product:ProductId){
+  //   this.productCollection.doc(product.id).push(product);
+  //}
+
+  //db.collection('reviews').
 }
