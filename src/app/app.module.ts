@@ -20,9 +20,12 @@ import {MainPage} from "../pages/main/main";
 import { GameApi } from '../Services/game-api';
 import { MyApp } from './app.component';
 import { environment } from '../environment/environment';
+<<<<<<< HEAD
 import { GenresProvider } from '../providers/genres/genres';
 import { GenrePopulatedPage } from '../pages/genre-populated/genre-populated';
 // import { GenresProvider } from '../providers/genres/genres';
+=======
+>>>>>>> 76e1cae5cbecba6bb4f2c3c3d8f707d525364ce5
 
 @NgModule({
   declarations: [

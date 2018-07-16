@@ -35,9 +35,7 @@ page-main {
   }
 
   ion-card {
-    padding-top: 30px;
-    width: 180px !important;
-    height: 250px;
+    width: 175px !important;
     display: inline-block;
 
 
@@ -45,7 +43,7 @@ page-main {
 
 
   ion-scroll {
-    min-height: 400px;
+    min-height: 300px;
     height: auto;
 
     .scroll-content {
@@ -53,35 +51,50 @@ page-main {
     }
   }
 
-  // .buttonClass{
-  //   // background-color: red;
-  //   border: 1px solid black;
-  //   margin: auto;
-  //   text-align: center;
-  //   display: flex;
-  //   justify-content: center;
+  .cover{
+    display: block;
+    margin: auto auto;
+    height: 80%;
+  }
+  .game-name{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
 
-    ion-card-content{
-     // border: 1px solid black;
-     // width: 100px;
-     height: 100px;
-     margin: auto;
-     // background-color: rgba(255,255,255, .8);
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     border-radius: 5px;
-     color: black;
-
-     ion-card-title{
-       // border: 1px solid black;
-     }
+    h3{
+      text-align: center;
+      white-space: normal;
     }
+  }
 
-    ion-card-content:hover{
-      // background-color: rgba(192,192,192,0.8);
-    }
-  // }
+  ion-card img {
+    display: block;
+  }
+  .card-content-md {
+    padding: 13px 16px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    height: 100%;
+  }
+  .card-title-md {
+    display: block;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    color: #222;
+    margin: 2px 0;
+    padding: 8px 0;
+    height: 100%;
+  }
+  .card-md {
+    margin: 10px;
+    border-radius: 2px;
+    height: 250px;
+    width: calc(100% - 20px);
+    font-size: 1.4rem;
+    background: #fff;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }
+
 
 }

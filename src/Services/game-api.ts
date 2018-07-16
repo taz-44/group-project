@@ -31,7 +31,7 @@ export class GameApi {
 
   getGenresDetails(genreId): Observable<any> {
 
-    return this.http.get(`${this.baseUrl}/genres/${genreId}`, {headers : new HttpHeaders().set("user-key", igdb.default)})
+    return this.http.get(`${this.baseUrl}/genres/?fields=*&filter[genres][eq]=${genreId}&limit=60`, {headers : new HttpHeaders().set("user-key", igdb.default)})
 
   }
 

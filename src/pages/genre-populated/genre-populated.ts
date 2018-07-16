@@ -54,4 +54,4 @@ export class GenrePopulatedPage {
   // detailsFunction(game){
   //   this.navCtrl.push(GameDetailsPage)
   // }
-}
+// }

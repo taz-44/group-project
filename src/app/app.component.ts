@@ -4,11 +4,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {AuthPage} from "../pages/auth/auth";
+<<<<<<< HEAD
 import { MainPage } from '../pages/main/main';
 import { GenresProvider } from '../providers/genres/genres';
 import { GameApi } from '../Services/game-api';
 import { GenresPage } from '../pages/genres/genres';
 import { GenrePopulatedPage } from '../pages/genre-populated/genre-populated';
+=======
+import {GameReviewsPage} from "../pages/game-reviews/game-reviews";
+>>>>>>> 76e1cae5cbecba6bb4f2c3c3d8f707d525364ce5
 
 @Component({
   templateUrl: 'app.html'
@@ -16,10 +20,16 @@ import { GenrePopulatedPage } from '../pages/genre-populated/genre-populated';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
+<<<<<<< HEAD
   genres: any;
   genresArray = [];
   rootPage: any = MainPage;
   currentGenre;
+=======
+  // rootPage: any = AuthPage;
+  rootPage: any = AuthPage;
+>>>>>>> 76e1cae5cbecba6bb4f2c3c3d8f707d525364ce5
+
 
   pages: Array<{title: string, component: any}>;
 
