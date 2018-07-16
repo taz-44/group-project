@@ -2,11 +2,22 @@ page-game-details {
     ion-content {
         ion-card {
             margin: 20px;
-            ion-card-content {
+            #card {
                 height: 100%;
-                #name {
+                #top {
+                    display: flex;
+                    height: 120px;
+                    width: 100%;
                     margin-bottom: 20px;
-                    height: 50px;
+
+                    #gameCover{
+                        height: 100px;
+                        width: 100px;
+                        margin: 10px;
+                    }
+                    #name {
+                        height: 50px;
+                    }
                 }
                 #summary {
                     margin-bottom: 20px; 
