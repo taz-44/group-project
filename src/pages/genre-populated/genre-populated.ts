@@ -43,18 +43,11 @@ export class GenrePopulatedPage {
   }
 
   ionViewDidEnter(){
-    console.log(this.gamesArray);
+    // console.log(this.gamesArray);
     this.currentGenre = this.genresProvider.currentGenre;
     this.gameIdsofGenre = this.genresProvider.gameIdsofGenre;
     console.log(this.gameIdsofGenre);
-    // this.gameIdsofGenre = [100, 66, 53, 13, 69, 434, 612, 4214];
-    // setTimeout(function(){
-    for(let i = 0; i < this.numberOfGamesToLoad; i++){
-      this.gameApi.getGameDetails(this.genresProvider.gameIdsofGenre[i]).subscribe(data =>{
-        this.gamesArray.push(data[0]);
-      })
     }
-  // }, 3000);
 
   }
 
