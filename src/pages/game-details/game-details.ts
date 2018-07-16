@@ -17,20 +17,24 @@ import { GameReviewsPage } from '../game-reviews/game-reviews';
   templateUrl: 'game-details.html',
 })
 export class GameDetailsPage {
-  gameDetails: string;
+  gameDetails: any;
+  gameDetailsName: string;
+  gameDetailsSummary: string;
 
   //Game id will be getting fed from genres page
   constructor(public navCtrl: NavController, public navParams: NavParams, private gameApi: GameApi) {
-    this.gameApi.getGameDetails(54432).subscribe( data =>{
+    this.gameApi.getGameDetails(54996).subscribe( data =>{
       this.gameDetails = data;
-      console.log(this.gameDetails);
+      this.gameDetailsName = this.gameDetails.name;
+      this.gameDetailsSummary = this.gameDetails.summary;
+      console.log(this.gameDetailsName);
+      console.log(this.gameDetailsSummary);
     })
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GameDetailsPage');
     this.gameApi.getGames();
-    console.log( this.gameApi );
 
   }
 
