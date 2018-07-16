@@ -1,9 +1,12 @@
 page-game-details {
     ion-content {
         ion-card {
+            margin-top: 100px;
             margin: 20px;
+
             #card {
                 height: 100%;
+                
                 #top {
                     display: flex;
                     height: 120px;
