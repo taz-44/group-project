@@ -13,7 +13,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // rootPage: any = AuthPage;
-  rootPage: any = GameReviewsPage;
+  rootPage: any = AuthPage;
 
 
   pages: Array<{title: string, component: any}>;
