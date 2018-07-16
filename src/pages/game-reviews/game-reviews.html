@@ -36,20 +36,18 @@
 
     </ion-item>
 
-    <!--<button ion-button icon-only>-->
-      <!--<ion-icon name="star"></ion-icon>-->
-    <!--</button>-->
-
-
-
   </ion-list>
+
+
 
   <button ion-button full color="secondary" (click)="addItem()">Submit</button>
 
-  <ion-card *ngFor="let review of reviews | async">
+  <ion-card *ngFor="let review of reviews">
     <ion-card-header>
       {{ review.title }}
     </ion-card-header>
+
+
     <ion-card-content>
       <p>{{ review.review }}</p>
       <!--<p>{{ review.stars }}</p>-->
@@ -62,36 +60,15 @@
         <ion-icon name="{{review.stars >= 5 ? 'star' : 'ios-star-outline'}}" (click)=setReview(5)></ion-icon>
 
       </ion-item>
+
+
+          <ion-note>
+            <p>{{date|date : 'short'}}</p>
+          </ion-note>
+
+
     </ion-card-content>
   </ion-card>
-
-  <!--<ion-card>-->
-    <!--<li *ngFor="let review of reviews | async">-->
-    <!--<ion-card-header>-->
-
-    <!--</ion-card-header>-->
-      <!--<ion-card-content>-->
-
-      <!--</ion-card-content>-->
-      <!--<ion-card-content>-->
-        <!---->
-      <!--</ion-card-content>-->
-  <!--</ion-card>-->
-
-
-
-  <!--<ul>-->
-  <!--<li *ngFor="let review of reviews | async">-->
-    <!--{{ review.title }}-->
-    <!--{{ review.review }}-->
-    <!--{{ review.stars }}-->
-
-  <!--</li>-->
-<!--</ul>-->
-
-
-
-
 
 
 </ion-content>

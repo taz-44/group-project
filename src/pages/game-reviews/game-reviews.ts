@@ -20,7 +20,7 @@ import { map} from "rxjs/operators"
     review: string;
     title: string;
     stars: number;
-    date: Date
+    date: Date;
 
 }
 
@@ -32,6 +32,8 @@ import { map} from "rxjs/operators"
 
 
 export class GameReviewsPage {
+
+    date = new Date();
     review: Reviews = {
       title: "",
       review: "",
@@ -44,7 +46,12 @@ export class GameReviewsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public afs: AngularFirestore) {
     this.reviewsCollection = afs.collection<Reviews>('reviews');
-    this.reviews = this.reviewsCollection.valueChanges();
+    this.reviewsCollection.valueChanges().subscribe(reviews => {
+      this.reviews = reviews;
+
+      //...how to sort array of objects...
+
+    });
 
 
   }
@@ -60,12 +67,5 @@ export class GameReviewsPage {
   setReview(rating: number) {
     this.review.stars = rating;
   }
-
-  // saveProduct(product:ProductId){
-  //   this.productCollection.doc(product.id).push(product);
-  //}
-
-
-  //db.collection('reviews').
 
 }
