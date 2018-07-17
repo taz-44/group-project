@@ -8,6 +8,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule , AngularFireDatabase } from "angularfire2/database";
+import { AngularFirestoreCollection} from "angularfire2/firestore";
 
 import { Facebook } from '@ionic-native/facebook';
 import { StatusBar } from '@ionic-native/status-bar';
