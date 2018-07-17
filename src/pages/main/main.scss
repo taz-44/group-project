@@ -5,25 +5,28 @@ page-main {
     box-shadow: 0px 0px 20px 1px black;
   }
   .mainHeader{
-      background-color: white;
+      background-color: #207068;
+      width: 100%;
       text-align: center;
 
       // border-bottom: 5px solid black;
 
       h2{
-        color: black;
+        color: #FFFFF0;
         padding-bottom: 5px;
       }
   }
 
   .mainContainer{
-    background-image: url('../../assets/imgs/backgroundLarge.jpeg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: #FFFFF0;
+    // background-image: url('../../assets/imgs/backgroundLarge.jpeg');
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
 
     .innerContainer{
-      background-color: rgba(255, 255, 255, .8);
+      background-color:  #FFFFF0;
+      // border: 1px solid black;
       border-radius: 10px;
       color: white;
       text-align: center;
@@ -91,10 +94,73 @@ page-main {
     height: 250px;
     width: calc(100% - 20px);
     font-size: 1.4rem;
-    background: #fff;
+    // background: #fff;
     -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   }
 
+  .gameCard{
+    // border: 1px solid black;
+    background-color: rgba(32,112,104,.1);
+    // height: auto;
+    // background-color: rgba(255,255,255, .7);
+    box-shadow: none;
+    border-radius: 15px;
+  }
+
+  .gameCard:hover{
+    background-color: rgb(32,112,104);
+    color: white;
+    h3{
+      color: white;
+    }
+  }
+
+  .gameBox{
+    // border: 1px solid red;
+    background-color: none;
+    border-radius: 15px;
+    height: 250px;
+    padding: 0;
+
+
+    .gameBoxInner{
+      // border: 1px solid blue;
+      background-color: none;
+      border-radius: 15px;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0;
+      .cover{
+        margin-top: -5px;
+      }
+      div{
+        // border: 1px solid black;
+        margin-bottom: 10px;
+        h3{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .genresButton{
+    // border: 1px solid black;
+    width: auto;
+    margin: auto;
+    background-color:  rgba(32,112,104,.1);
+    border-radius: 5px;
+    color: black;
+  }
+
+  .genresButton:hover{
+    background-color: rgb(32,112,104);
+    color: white;
+  }
 
 }

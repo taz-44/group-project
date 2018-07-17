@@ -15,7 +15,95 @@ export class GenresPage {
 
   genres:any;
   genresArray: Array<any> = [];
-  // currentGenre;
+  genresNameId = [
+    {
+    'name': "Real Time Strategy (RTS)",
+    'id': 11
+  },
+  {
+  'name': "Puzzle",
+  'id': 9
+},
+{
+'name': "Hack and Slash",
+'id': 25
+},
+{
+'name': "Pinball",
+'id': 30
+},
+{
+'name': "Role-Playing-RPG",
+'id': 12
+},
+{
+'name': "Adventure",
+'id': 31
+},
+{
+'name': "Shooter",
+'id': 5
+},
+{
+'name': "Music",
+'id': 7
+},
+{
+'name': "Puzzle",
+'id': 9
+},
+{
+'name': "Point-and-Click",
+'id': 2
+},
+{
+'name': "Puzzle",
+'id': 9
+},
+{
+'name': "Simulator",
+'id': 13
+},
+{
+'name': "Quiz/Trivia",
+'id': 26
+},
+{
+'name': "Arcade",
+'id': 33
+},
+{
+'name': "Tactical",
+'id': 24
+},
+{
+'name': "Fighting",
+'id': 4
+},
+{
+'name': "Strategy",
+'id': 15
+},
+{
+'name': "Racing",
+'id': 10
+},
+{
+'name': "Platform",
+'id': 8
+},
+{
+'name': "Sport",
+'id': 14
+},
+{
+'name': "Indie",
+'id': 32
+},
+{
+'name': "Turn-based",
+'id': 16
+}];
 
 
   constructor(
@@ -25,46 +113,13 @@ export class GenresPage {
     public gameApi: GameApi,
     public genresProvider: GenresProvider,
     public events: Events
-      ) {
-        this.gameApi.getGenres().subscribe(data =>{
-          this.genres = data;
-          for(let i = 0; i < this.genres.length; i++){
-            this.gameApi.getGenresDetails(this.genres[i].id).subscribe(data =>{
-              this.genresArray.push(data[0])
-            })
-          }
-          console.log(this.genresArray);
-        this.genresProvider.genres = this.genresArray;
-        })
-
-        // events.subscribe('updateGenre', (currentGenre) =>{
-        //   console.log(currentGenre);
-        //   this.currentGenre = currentGenre;
-        // })
-
-      }
-
-  // ionViewDidLoad() {
-  //   console.log('ionViewDidLoad GenresPage');
-  //   console.log(this.genres);
-  //   // this.selectedGenre = this.genresProvider.currentGenre;
-  // }
-
-  // ionViewDidEnter(){
-  //   console.log('entered genres.ts');
-  // }
+      ) {}
 
 
   goToGenresPopulate(genre){
-    for(let i = 0; i < this.genresArray.length; i++){
-        if(this.genresArray[i].name.toString() === genre.name.toString()){
-          this.genresProvider.gameIdsofGenre.push(this.genresArray[i].games);
-        }
-    }
-    console.log(this.genresProvider.gameIdsofGenre);
-
-    // console.log(genre.name);
-    this.genresProvider.currentGenre = genre.name;
+    console.log(genre.name);
+    this.genresProvider.genreId = genre.id;
+    this.genresProvider.currentGenre = genre.name
     this.navCtrl.push(GenrePopulatedPage)
 
   }

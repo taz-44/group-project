@@ -15,8 +15,8 @@
 
 <ion-content class="backgroundContainer">
   <div class="mainContainer">
-    <div class="gameContainer" *ngFor="let game of gamesToDisplay">
-      <!-- <img class="cover" src="game.cover.url"> -->
+    <div class="gameContainer" *ngFor="let game of gameArray">
+      <img class="cover" src="{{game.cover.url}}">
       <p>{{game.name}}</p>
     </div>
   </div>

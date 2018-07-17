@@ -6,7 +6,8 @@ import { Injectable } from '@angular/core';
 export class GenresProvider {
 
   genres = [];
-  currentGenre;
+  currentGenre: string;
+  genreId: number;
   gameIdsofGenre = [];
 
   constructor(public http: HttpClient) {}

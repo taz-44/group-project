@@ -1,6 +1,6 @@
 page-auth {
-
-
+// background-color: #FFFFF0;
+// font-family: Cairo;
 ion-navbar{
   // border: 1px solid black;
   height: 50px;
@@ -9,36 +9,57 @@ ion-navbar{
 
   ion-title{
     text-align: center;
-    background-color: white;
+    background-color: #207068;
     // border-bottom: 1px solid black;
     // width: 50%;
 
 
     h2{
       // color: rgba(255,255,255, .5);
-      color: black;
+      color: #FFFFF0;
       padding-bottom: 5px;
     }
   }
 
+  .mainContainer{
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFF0;
+    // margin-top: -80px;
+    padding-top: 40px;
+  }
   ion-content{
     text-align: center;
-    // padding-top: 50px;
+    // border: 1px solid red;
+    height: 100%;
+    width: 100%;
+
+    .logoDiv{
+
+      width: 200px;
+      height: 200px;
+      // border: 1px solid black;
+      margin: auto;
+      margin-top: 80px;
+      background-image: url('../../../assets/imgs/g4Logo.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+
+    }
 
     .hello{
-      height: 100%;
-      width: 100%;
-      background-image: url('../../assets/imgs/backgroundLarge.jpeg');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
+      height: 150px;
+      width: 80%;
       // border: 1px solid black;
+      margin: auto;
+      margin-top: 50px;
       color: black;
       display: flex;
       justify-content: center;
       align-items: center;
       div{
-        background-color: rgba(255,255,255, .9);
+        background-color: #FFFFF0;;
         border-radius: 5px;
         padding: 10px;
       }
@@ -48,6 +69,10 @@ ion-navbar{
   }
 
   .buttonCard{
-    background-color: red;
+    // background-color: red;
+  }
+  .signInPrompt{
+    font-size: 18px;
+    // color: #207068;
   }
 }

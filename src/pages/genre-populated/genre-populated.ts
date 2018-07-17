@@ -18,40 +18,30 @@ import { GameDetailsPage } from '../game-details/game-details';
 })
 export class GenrePopulatedPage {
 
-  // games: Array<any>;
-  numberOfGamesToLoad: number = 6;
-  genresArray: Array<any> = [];
   currentGenre: string;
-  gameIdsofGenre = [];
-  gamesArray: Array<any> = [];
+  genreId: number;
+  gameArray: Array<any> = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public gameApi: GameApi, public genresProvider: GenresProvider) {
-
-    // this.gameApi.getGenres().subscribe(data =>{
-    //   this.games = data;
-    //   for(let i = 0; i < this.games.length; i++){
-    //     this.gameApi.getGenresDetails(this.games[i].id).subscribe(data => {
-    //       this.gamesArray.push(data[0]);
-    //     })
-    //   }
-    //   console.log(this.gamesArray);
-    // })
-  }
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public gameApi: GameApi,
+    public genresProvider: GenresProvider) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GenrePopulatedPage');
   }
 
   ionViewDidEnter(){
-    // console.log(this.gamesArray);
     this.currentGenre = this.genresProvider.currentGenre;
-    this.gameIdsofGenre = this.genresProvider.gameIdsofGenre;
-    console.log(this.gameIdsofGenre);
+    this.genreId = this.genresProvider.genreId;
+    console.log('id:' + this.currentGenre)
+    console.log('id:' + this.genreId)
+
+    this.gameApi.getGenresDetails(this.genreId).subscribe( data => {
+      this.gameArray = data;
+    })
+    console.log(this.gameArray);
     }
 
   }
-
-  // detailsFunction(game){
-  //   this.navCtrl.push(GameDetailsPage)
-  // }
-// }

@@ -7,7 +7,7 @@
 
   <!-- <ion-icon name="ios-menu" (click)="openMenu()"></ion-icon> -->
   <div class="mainContainer">
-    <button #genre class="genresButton" *ngFor="let genres of genresArray" (click)="goToGenresPopulate(genres)">{{genres.name}}</button>
+    <button #genre class="genresButton" *ngFor="let genres of genresNameId" (click)="goToGenresPopulate(genres)">{{genres.name}}</button>
   </div>
 
 </ion-content>
