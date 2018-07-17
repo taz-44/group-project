@@ -1,4 +1,4 @@
-import * as fireKey from "../../secure-stuff/firebaseKey"
+import * as fireKey from "../../secure-stuff/firebaseKey";
 
 export const environment = {
   production: false,

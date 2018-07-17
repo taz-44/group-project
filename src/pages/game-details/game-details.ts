@@ -10,18 +10,25 @@ import { GameReviewsPage } from '../game-reviews/game-reviews';
   templateUrl: 'game-details.html',
 })
 export class GameDetailsPage {
+  gameDetails: any;
+  gameDetailsName: string;
+  gameDetailsSummary: string;
+  gameSelected: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private gameApi: GameApi) {
+    this.gameSelected = this.navParams.data;
+
+    this.gameApi.getGameDetails(this.gameSelected.gameId).subscribe( data =>{
+      this.gameDetails = data;
+      this.gameDetailsName = this.gameDetails.name;
+      this.gameDetailsSummary = this.gameDetails.summary;
+    })
+
+    console.log(this.gameSelected);
   }
-
-  pullDetails() {}
-
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GameDetailsPage');
-    this.gameApi.getGames();
-    console.log( this.gameApi );
-
   }
 
   toReviewsPage(gameId) {
