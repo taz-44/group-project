@@ -1,8 +1,7 @@
 import { Injectable } from "@angular/core";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import { Observable } from "rxjs/Observable";
-import * as igdb from "../secure-stuff/igdbKey";
-import {a} from "@angular/core/src/render3";
+import * as igdb from "../../secure-stuff/igdbKey";
 
 
 @Injectable()
