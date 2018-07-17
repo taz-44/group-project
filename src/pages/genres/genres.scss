@@ -29,11 +29,13 @@ ion-content{
   background-color: blue;
 
   div{
+    // border: 1px solid black;
     width: 100%;
-    height: auto;
+    height: 96%;
     text-align: center;
     padding: 10px 0 10px 0;
     background-color: #FFFFF0;
+    overflow: scroll;
 
 
     .genresButton{
@@ -45,7 +47,6 @@ ion-content{
       margin: 5px auto 0 auto;
       color: black;
       font-size: 1.3em;
-      overflow: scroll;
 
     }
     button:hover{

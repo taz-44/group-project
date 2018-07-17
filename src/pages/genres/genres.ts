@@ -24,10 +24,10 @@ export class GenresPage {
   'name': "Puzzle",
   'id': 9
 },
-{
-'name': "Hack and Slash",
-'id': 25
-},
+// {
+// 'name': "Hack and Slash",
+// 'id': 25
+// },
 {
 'name': "Pinball",
 'id': 30
