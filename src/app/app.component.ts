@@ -3,6 +3,10 @@ import { Nav, Platform, MenuController, NavController, Events } from 'ionic-angu
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+
+import { AngularFirestore} from "angularfire2/firestore";
+
+
 import {AuthPage} from "../pages/auth/auth";
 // <<<<<<< HEAD
 import { MainPage } from '../pages/main/main';
@@ -13,6 +17,11 @@ import { GenrePopulatedPage } from '../pages/genre-populated/genre-populated';
 // =======
 import {GameReviewsPage} from "../pages/game-reviews/game-reviews";
 // >>>>>>> 76e1cae5cbecba6bb4f2c3c3d8f707d525364ce5
+
+//eniig 11nd nemev uuruu
+import {AngularFireDatabase} from 'angularfire2/database';
+
+import { Observable} from "rxjs/Observable";
 
 @Component({
   templateUrl: 'app.html'
