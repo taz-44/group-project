@@ -23,7 +23,7 @@ export class MyApp {
 // <<<<<<< HEAD
   genres: any;
   genresArray = [];
-  rootPage: any = MainPage;
+  rootPage: any = GenresPage; 
   currentGenre;
 // =======
   // rootPage: any = AuthPage;

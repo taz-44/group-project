@@ -20,7 +20,11 @@ export class GenrePopulatedPage {
 
   currentGenre: string;
   genreId: number;
-  gameArray: Array<any> = [];
+  gameArray: Array<any>;
+//   [{'name':'gay ass game',
+// 'cover':{
+//   'url':'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426'
+// }}];
 
   constructor(
     public navCtrl: NavController,
@@ -34,6 +38,7 @@ export class GenrePopulatedPage {
 
   ionViewDidEnter(){
     this.currentGenre = this.genresProvider.currentGenre;
+    // this.currentGenre = "cool";
     this.genreId = this.genresProvider.genreId;
     console.log('id:' + this.currentGenre)
     console.log('id:' + this.genreId)

@@ -3,19 +3,19 @@ page-genre-populated {
   ion-navbar{
       height: 50;
       text-align: center;
-
-      h2{
-        margin-bottom: 15px;
+        ion-title{
+          background-color: #207068;
+        h2{
+          margin-bottom: 15px;
+          color: #FFFFF0;
+        }
       }
   }
 
   .backgroundContainer{
     width: 100%;
     height: 100%;
-    background-image: url('../../../assets/imgs/backgroundLarge.jpeg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #FFFFF0;
 
     .mainContainer{
       width: 100%;
