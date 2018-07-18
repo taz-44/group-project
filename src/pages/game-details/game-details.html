@@ -20,7 +20,7 @@
         <div  id="summary">
           {{game.summary}}
         </div>
-        <button class="reviewButton" ion-button (click)="toReviewsPage()">
+        <button ion-button class="reviewButton" (click)="toReviewsPage(this.gameSelected.gameId)">
           Game Reviews
         </button>
       </ion-card-content>

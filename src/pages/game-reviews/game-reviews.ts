@@ -2,27 +2,20 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {GameApi} from "../../Services/game-api";
 
-import { AngularFireDatabase} from "angularfire2/database";
 import { Observable} from "rxjs/Observable";
-
-import { AngularFirestore, AngularFirestoreCollection} from "angularfire2/firestore";
 import { map} from "rxjs/operators"
 
-/**
- * Generated class for the GameReviewsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { AngularFirestore, AngularFirestoreCollection} from "angularfire2/firestore";
+import { AngularFireDatabase} from "angularfire2/database";
 
-//bi nemsen
+
+
 export interface Reviews {
   review: string;
   title: string;
   stars: number;
   date: Date;
-  // gameId: number;
-
+  gameId: any;
 }
 
 @IonicPage()
@@ -37,9 +30,12 @@ export class GameReviewsPage {
     title: "",
     review: "",
     stars: 0,
-    date: new Date()
-    //gameId = this.Id;
+    date: new Date(),
+    gameId: this.navParams.data.gameId
   };
+  reviewsArray:any;
+  filteredArray:any;
+
 
   private reviewsCollection: AngularFirestoreCollection<Reviews>;
   reviews: Observable<Reviews[]>;
@@ -47,12 +43,23 @@ export class GameReviewsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public afs: AngularFirestore) {
     this.reviewsCollection = afs.collection<Reviews>('reviews');
     this.reviews = this.reviewsCollection.valueChanges();
+    this.reviews.subscribe(data =>{
+      this.reviewsArray = data;
+      console.log(this.reviewsArray);
+      this.filteredArray = this.filterReviews(this.reviewsArray);
+    });
 
 
   }
 
   addItem() {
     this.reviewsCollection.add(this.review);
+  }
+
+  filterReviews(myArr) {
+    return myArr.filter((item) => {
+      return item.gameId === this.navParams.data.gameId
+    });
   }
 
   ionViewDidLoad() {
@@ -66,10 +73,4 @@ export class GameReviewsPage {
   close(){
     this.navCtrl.pop();
   }
-
-  // saveProduct(product:ProductId){
-  //   this.productCollection.doc(product.id).push(product);
-  //}
-
-  //db.collection('reviews').
 }

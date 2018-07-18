@@ -3,9 +3,6 @@ import {IonicModule, IonicPageModule} from 'ionic-angular';
 import { GameReviewsPage } from './game-reviews';
 
 
-
-
-
 @NgModule({
   declarations: [
     GameReviewsPage,
