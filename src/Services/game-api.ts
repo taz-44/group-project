@@ -2,8 +2,6 @@ import { Injectable } from "@angular/core";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import { Observable } from "rxjs/Observable";
 import * as igdb from "../../secure-stuff/igdbKey";
-import {a} from "@angular/core/src/render3";
-
 
 @Injectable()
 export class GameApi {
@@ -27,13 +25,13 @@ export class GameApi {
 
   getGenres(): Observable<any> {
 
-    return this.http.get(`${this.baseUrl}/genres/`, {headers : new HttpHeaders().set("user-key", igdb.default)})
+    return this.http.get(`${this.baseUrl}/genres/?fields=*&limit=30`, {headers : new HttpHeaders().set("user-key", igdb.default)})
 
   }
 
   getGenresDetails(genreId): Observable<any> {
 
-    return this.http.get(`${this.baseUrl}/genres/${genreId}`, {headers : new HttpHeaders().set("user-key", igdb.default)})
+    return this.http.get(`${this.baseUrl}/games/?fields=*&filter[genres][eq]=${genreId}&order=popularity:desc&limit=50`, {headers : new HttpHeaders().set("user-key", igdb.default)})
 
   }
 

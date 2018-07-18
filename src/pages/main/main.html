@@ -21,9 +21,11 @@
       <ion-card *ngFor="let popularGame of popularGamesArray">
         <ion-card-content (click)="clickedGame(popularGame.id)">
           <ion-card-title>
-            <img class="cover" src="{{popularGame.cover.url}}">
+            <img class="cover" src="//images.igdb.com/igdb/image/upload/t_logo_med/{{popularGame.cover.cloudinary_id}}.jpg">
+            <div class="game-name">
+              <h3>{{popularGame.name}}</h3>
+            </div>
           </ion-card-title>
-          {{popularGame.name}}
         </ion-card-content>
       </ion-card>
     </ion-scroll>
@@ -33,9 +35,12 @@
       <ion-card *ngFor="let recentlyReleasedGame of recentlyReleasedGamesArray">
         <ion-card-content (click)="clickedGame(recentlyReleasedGame.game.id)">
           <ion-card-title>
-            <img class="cover" src="{{recentlyReleasedGame.game.cover.url}}">
+            <img class="cover" src="//images.igdb.com/igdb/image/upload/t_logo_med/{{recentlyReleasedGame.game.cover.cloudinary_id}}.jpg">
+            <div class="game-name">
+              <h3>{{recentlyReleasedGame.game.name}}</h3>
+            </div>
           </ion-card-title>
-          {{recentlyReleasedGame.game.name}}
+
         </ion-card-content>
       </ion-card>
     </ion-scroll>
@@ -45,9 +50,12 @@
       <ion-card *ngFor="let upcomingGame of upcomingGamesArray">
         <ion-card-content (click)="clickedGame(upcomingGame.game.id)">
           <ion-card-title>
-            <img class="cover" src="{{upcomingGame.game.cover.url}}">
+            <img class="cover" src="//images.igdb.com/igdb/image/upload/t_logo_med/{{upcomingGame.game.cover.cloudinary_id}}.jpg">
+            <div class="game-name">
+              <h3>{{upcomingGame.game.name}}</h3>
+            </div>
           </ion-card-title>
-          {{upcomingGame.game.name}}
+
         </ion-card-content>
       </ion-card>
     </ion-scroll>

@@ -3,7 +3,17 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+
+import { AngularFirestore} from "angularfire2/firestore";
+
+
 import {AuthPage} from "../pages/auth/auth";
+import {GameReviewsPage} from "../pages/game-reviews/game-reviews";
+
+//eniig 11nd nemev uuruu
+import {AngularFireDatabase} from 'angularfire2/database';
+
+import { Observable} from "rxjs/Observable";
 
 @Component({
   templateUrl: 'app.html'
@@ -11,7 +21,9 @@ import {AuthPage} from "../pages/auth/auth";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
+  // rootPage: any = AuthPage;
   rootPage: any = AuthPage;
+
 
   pages: Array<{title: string, component: any}>;
 
