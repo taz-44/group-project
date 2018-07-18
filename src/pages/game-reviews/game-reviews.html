@@ -1,8 +1,10 @@
 <ion-header>
   <ion-toolbar transparent>
-    <ion-title>Add Review</ion-title>
+    <ion-title><h2>Reviews</h2></ion-title>
     <ion-buttons end>
-      //<button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+      <!-- <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button> -->
+      <!-- <ion-icon class="headerClose" name="close" (click)="close()"></ion-icon> -->
+      <button ion-button icon-only class="headerClose" (click)="close()"><ion-icon name="close"></ion-icon></button>
     </ion-buttons>
 
   </ion-toolbar>
@@ -10,8 +12,9 @@
 
 
 <ion-content>
+  <div class="mainContainer">
 
-  <ion-item>
+  <ion-item class="titleItem">
     <ion-label floating>Title</ion-label>
     <ion-input [(ngModel)]="review.title" type="text"></ion-input>
   </ion-item>
@@ -24,36 +27,32 @@
 
 
 
-  <ion-list no-lines>
+  <ion-list no-lines class="starContainer">
 
     <ion-item>
-
+      <div class="hi">
       <ion-icon name="{{review.stars >= 1 ? 'star' : 'ios-star-outline'}}" (click)=setReview(1)></ion-icon>
       <ion-icon name="{{review.stars >= 2 ? 'star' : 'ios-star-outline'}}" (click)=setReview(2)></ion-icon>
       <ion-icon name="{{review.stars >= 3 ? 'star' : 'ios-star-outline'}}" (click)=setReview(3)></ion-icon>
       <ion-icon name="{{review.stars >= 4 ? 'star' : 'ios-star-outline'}}" (click)=setReview(4)></ion-icon>
       <ion-icon name="{{review.stars >= 5 ? 'star' : 'ios-star-outline'}}" (click)=setReview(5)></ion-icon>
-
+    </div>
     </ion-item>
-
-    <!--<button ion-button icon-only>-->
-    <!--<ion-icon name="star"></ion-icon>-->
-    <!--</button>-->
-
-
 
   </ion-list>
 
-  <button ion-button full color="secondary" (click)="addItem()">Submit</button>
+  <button class="submitButton" ion-button full color="secondary" (click)="addItem()">Submit</button>
 
-  <ion-card *ngFor="let review of reviews | async">
+  <ion-card class="postedReview" *ngFor="let review of reviews | async">
     <ion-card-header>
       {{ review.title }}
     </ion-card-header>
-    <ion-card-content>
+    <hr class="titleRule">
+    <ion-card-content class="starContainer">
       <p>{{ review.review }}</p>
       <!--<p>{{ review.stars }}</p>-->
-      <ion-item>
+
+      <ion-item class="postedStars">
 
         <ion-icon name="{{review.stars >= 1 ? 'star' : 'ios-star-outline'}}" (click)=setReview(1)></ion-icon>
         <ion-icon name="{{review.stars >= 2 ? 'star' : 'ios-star-outline'}}" (click)=setReview(2)></ion-icon>
@@ -64,34 +63,5 @@
       </ion-item>
     </ion-card-content>
   </ion-card>
-
-  <!--<ion-card>-->
-  <!--<li *ngFor="let review of reviews | async">-->
-  <!--<ion-card-header>-->
-
-  <!--</ion-card-header>-->
-  <!--<ion-card-content>-->
-
-  <!--</ion-card-content>-->
-  <!--<ion-card-content>-->
-  <!---->
-  <!--</ion-card-content>-->
-  <!--</ion-card>-->
-
-
-
-  <!--<ul>-->
-  <!--<li *ngFor="let review of reviews | async">-->
-  <!--{{ review.title }}-->
-  <!--{{ review.review }}-->
-  <!--{{ review.stars }}-->
-
-  <!--</li>-->
-  <!--</ul>-->
-
-
-
-
-
-
+</div>
 </ion-content>

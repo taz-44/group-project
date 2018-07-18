@@ -20,6 +20,7 @@ export class GameDetailsPage {
 
     this.gameApi.getGameDetails(this.gameSelected.gameId).subscribe( data =>{
       this.gameDetails = data;
+      console.log(data);
       this.gameDetailsName = this.gameDetails.name;
       this.gameDetailsSummary = this.gameDetails.summary;
     })

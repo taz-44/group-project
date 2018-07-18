@@ -1,29 +1,29 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-title>Game Details</ion-title>
+    <ion-title><h2>Game Details</h2></ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content  padding>
-  <ion-content *ngFor="let game of gameDetails" padding>
+  <ion-content *ngFor="let game of gameDetails">
+    <div class="mainContainer">
     <ion-card>
       <ion-card-content id='card'>
         <div id='top'>
-          <div>
+            <h1>{{game.name}}</h1>
+            <hr>
+          <div class="infoContainer">
             <img src={{game.cover.url}} id='gameCover'>
           </div>
-          <ion-title  id="name">
-            {{game.name}}
-          </ion-title>
+
         </div>
         <div  id="summary">
           {{game.summary}}
         </div>
-        <button ion-button (click)="toReviewsPage()">
+        <button class="reviewButton" ion-button (click)="toReviewsPage()">
           Game Reviews
         </button>
       </ion-card-content>
     </ion-card>
+  </div>
   </ion-content>
-</ion-content>

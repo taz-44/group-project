@@ -63,6 +63,10 @@ export class GameReviewsPage {
     this.review.stars = rating;
   }
 
+  close(){
+    this.navCtrl.pop();
+  }
+
   // saveProduct(product:ProductId){
   //   this.productCollection.doc(product.id).push(product);
   //}

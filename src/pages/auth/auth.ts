@@ -65,5 +65,11 @@ export class AuthPage {
     })
   }
 
+  continueWithoutLogin(){
+    this.navCtrl.push(MainPage, {
+      name: 'GuesUser'
+    })
+  }
+
 
 }

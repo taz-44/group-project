@@ -49,4 +49,10 @@ export class GenrePopulatedPage {
     console.log(this.gameArray);
     }
 
+    gameDetailsFunction(gameId){
+      this.navCtrl.push(GameDetailsPage, {
+        gameId: gameId
+      })
+    }
+
   }
