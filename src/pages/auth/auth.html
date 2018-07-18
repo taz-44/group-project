@@ -14,7 +14,7 @@
 
 <ion-content>
 <div class="mainContainer">
-  <div class="logoDiv"></div>
+  <div class="logoDiv" styles="width: 100px; height: 100px; border: 1px solid black;"></div>
 
   <!--//shows after login-->
   <div *ngIf="afAuth.user | async as user; else showLogin">

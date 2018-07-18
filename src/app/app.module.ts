@@ -23,6 +23,7 @@ import { MyApp } from './app.component';
 import { environment } from '../environment/environment';
 import { GenresProvider } from '../providers/genres/genres';
 import { GenrePopulatedPage } from '../pages/genre-populated/genre-populated';
+import { HTTP } from '@ionic-native/http';
 // import { GenresProvider } from '../providers/genres/genres';
 
 
@@ -63,6 +64,7 @@ import { GenrePopulatedPage } from '../pages/genre-populated/genre-populated';
     SplashScreen,
     GameApi,
     AngularFireDatabase,
+    HTTP,
     Facebook,
     GenresProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

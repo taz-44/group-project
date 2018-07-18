@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { GameApi } from "../../Services/game-api";
 import {HttpClient} from "@angular/common/http";
+import { HTTP } from '@ionic-native/http'
 import {GameDetailsPage} from "../game-details/game-details";
 import {GenresPage} from "../genres/genres";
 

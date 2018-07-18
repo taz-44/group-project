@@ -26,6 +26,7 @@ ion-navbar{
     height: 100%;
     background-color: #FFFFF0;
     // margin-top: -80px;
+    border: 1px solid black;
     padding-top: 40px;
   }
   ion-content{
@@ -39,9 +40,13 @@ ion-navbar{
       width: 200px;
       height: 200px;
       // border: 1px solid black;
+      // background-color: red;
       margin: auto;
-      margin-top: 80px;
-      background-image: url('../../../assets/imgs/g4Logo.png');
+      // margin-top: 80px;
+      background: url('../assets/imgs/grouplogo.png');
+      -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
