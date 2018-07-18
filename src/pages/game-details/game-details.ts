@@ -3,7 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GameApi } from '../../Services/game-api';
 import { GameReviewsPage } from '../game-reviews/game-reviews';
 
-
 @IonicPage()
 @Component({
   selector: 'page-game-details',
@@ -24,7 +23,7 @@ export class GameDetailsPage {
       this.gameDetailsSummary = this.gameDetails.summary;
     })
 
-    console.log(this.gameSelected);
+    console.log(this.gameSelected.gameId);
   }
 
   ionViewDidLoad() {

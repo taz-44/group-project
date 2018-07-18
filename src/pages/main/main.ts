@@ -93,6 +93,9 @@ export class MainPage {
 
   logout() {
     this.afAuth.auth.signOut();
+    //a button is to be added on all page so that the use can log out
+    //also this button need to navigate to the root page so when they
+    //log out it kicks them back to the Authorization page.
   }
 
 }
